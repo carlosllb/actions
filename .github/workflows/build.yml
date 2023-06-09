@@ -39,9 +39,10 @@ jobs:
     environment:
       name: dev
     steps:
+      - uses: actions/checkout@v3
       # Runs a single command using the runners shell
       - name: Run dev script
-        run: ${{ env.SCRIPT_PATH }}dev.sh
+        run: cat dev.sh
 
   deploy_on_prod:
     name: Deploy on Pord
@@ -52,4 +53,4 @@ jobs:
     steps:
       # Runs a single command using the runners shell
       - name: Run prod script
-        run: ${{ env.SCRIPT_PATH }}prod.sh
+        run: cat prod.sh

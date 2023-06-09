@@ -51,6 +51,7 @@ jobs:
     environment:
       name: prod
     steps:
+      - uses: actions/checkout@v3
       # Runs a single command using the runners shell
       - name: Run prod script
         run: cat prod.sh
